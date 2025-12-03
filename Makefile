@@ -46,13 +46,10 @@ npm:
 test:
 	$(SAIL) artisan test
 
-# Run any npm command
-npm:
-	$(SAIL) npm $(cmd)
 
-dev:
+npm-dev:
 	$(SAIL) npm run dev
 
-build:
+npm-build:
 	$(SAIL) npm run build
 
