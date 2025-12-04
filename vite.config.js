@@ -8,6 +8,18 @@ export default defineConfig({
             input: ["resources/css/app.css", "resources/js/app.js"],
             refresh: true,
         }),
-        vue(),
+        vue({
+            template: {
+                transformAssetUrls: {
+                    base: null,
+                    includeAbsolute: false,
+                },
+            },
+        }),
     ],
+    resolve: {
+        alias: {
+            "@": "/resources/js",
+        },
+    },
 });
